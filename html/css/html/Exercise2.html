@@ -3,43 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercise 2</title>
+    <Style>
+    :root{
+      --page-bg: #ffffff;
+      --panel-bg: #fbf3db;     
+      --box-bg: #eef1f4;       
+      --blue: #3a74c9;        
+      --blue-soft: #d9ecff;    
+      --orange: #ff6a2a;       
+      --text: #2b2b2b;
+      --muted: #666;
+      --accent: #e74c3c;      
+    }
+    *{ box-sizing:border-box; }
+    
+    body{
+      margin:0;
+      background:#fbf3db; 
+      font-family: "Georgia", "Times New Roman", serif;
+    }
+    .main-title{
+      text-align:center;
+      font-size: 34px;
+      color: var(--orange);
+      margin: 6px 0 18px;
+      font-weight: 700;
+    }
+    .section-head{
+      background: var(--blue-soft);
+      border-left: 4px solid var(--blue);
+      padding: 2px 10px;
+      margin: 18px 0 8px;
+    }
+    .section-head h2{
+      margin: 0;
+      font-size: 20px;
+      color: var(--blue);
+      font-weight: 700;
+    }
+        .section-note{
+      margin: 4px 0 10px;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .box{
+      background: var(--box-bg);
+      padding: 14px 18px;
+      border-radius: 2px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+        ol{
+      margin: 0;
+      padding-left: 18px;
+    }
+    ul{
+      margin: 8px 0 10px 0;
+      padding-left: 18px;
+    }
+        .strong-red{
+      color: var(--accent);
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .strong-blue{
+      color: var(--blue);
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .strong-black{
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    </Style>
 </head>
 <body>
-    <h1>Exercise 2</h1>
-    <h2>Favorite Foods</h1>
-        <ol>
-            <li>
-                <strong>Pizza</strong>
-            </li>
-            <ul>
-             <li>Margherita</li>   
-             <li>Olives</li>   
-             <li>Tuna</li>   
-            </ul>
-            <li>
-                <strong>Ice Cream</strong>
-            </li>
-            <ul>
-                <li>Vanilla</li>
-                <li>Chocolate</li>
-                <li>Strawberry</li>
-            </ul>
-            <li><strong>Salad</strong></li>
-            <li><strong>Pasta</strong></li>
-        </ol>
-    <h2>Favorite Hobbies</h2>
-    <ul>
-        <li><strong>Reading</strong> - Science fiction novels</li>
-        <li><strong>Coding</strong> - Building web projects</li>
-        <li><strong>Hiking</strong> -   Nature trails</li>
-        <li> <strong>Gaming</strong>
-            <ul>
-                <li>Playing video games</li>
-                <li>Playing chess</li>
-            </ul>
+     <div class="main-title">My Favorite Things</div>
+     <div class="section-head">
+      <h2>Favorite Foods</h2>
+    </div>
+     <div class="section-note">Here are my top favorite foods, ranked in order:</div>
+    <div class="box">
+      <ol>
+        <li>
+          <span class="strong-red">Pizza</span>
+          <ul>
+            <li>Margherita</li>
+            <li>Olives</li>
+            <li>Tuna</li>
+          </ul>
         </li>
-     </ul>
 
+        <li><span class="strong-red">Ice Cream</span></li>
+        <li><span class="strong-red">Salad</span></li>
+        <li><span class="strong-red">Pasta</span></li>
+      </ol>
+    </div>
+
+     <!-- Favorite Hobbies -->
+    <div class="section-head">
+      <h2>Favorite Hobbies</h2>
+    </div>
+    <div class="section-note">These are the activities I enjoy in my free time:</div>
+
+    <div class="box">
+      <ul>
+        <li><span class="strong-red">Reading</span> - Science fiction novels</li>
+        <li><span class="strong-red">Coding</span> - Building web projects</li>
+        <li><span class="strong-red">Hiking</span> - Nature trails</li>
+        <li>
+          <span class="strong-red">Gaming</span>
+          <ul>
+            <li>Playing video games</li>
+            <li>Playing chess</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>

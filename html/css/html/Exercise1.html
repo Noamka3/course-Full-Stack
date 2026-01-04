@@ -1,22 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Introduction</title>
+
+  <style>
+    :root{
+      --blue:#1e88e5;
+      --line:#2c3e50;
+      --text:#2b2b2b;
+      --muted:#5a6a7a;
+      --purple:#6f42c1;
+      --green:#1b9e77;
+      --bg:#ffffff;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+
+    .wrap{
+      max-width: 980px;
+      margin: 24px auto;
+      padding: 0 18px;
+    }
+
+
+    .title{
+      text-align:center;
+      font-size: 30px;
+      font-weight: 700;
+      margin: 8px 0 16px;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+
+    .rule{
+      border: 0;
+      border-top: 2px solid var(--line);
+    }
+
+
+    h2{
+      margin: 0 0 6px;
+      color: var(--blue);
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    p{
+      margin: 0 0 6px;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .name{
+      color: var(--purple);
+      font-weight: 700;
+    }
+    .emph{
+      color: var(--green);
+      font-style: italic;
+      font-weight: 700;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Exercise 1</h1>
-    <h1> My Personal Introduction</h1>
-    <h3> About Me</h2>
-    <p>hellp my name is <strong>Noam Kadosh.</strong> I am a Software Engineering student and I am currently also studying a Full Stack course. I enjoy exploring and learning new things, I am highly motivated, and I am willing to invest the effort required to progress toward my goals. </p>
-    <hr>
-    <h3>My Interests</h2>
-    <p>I have a wide range of interests that keep me motivated and curious. I enjoy programming because it combines creativity with logical thinking. When I’m not coding, I like working out at the gym, spending time with friends, and reading books related to personal development.</p>
-    <hr>
-    <h3>My Goals</h2>
-        <p>My goal is to become an <strong>excellent software developer</strong> and to stand out in the field of Full Stack development. I aim to specialize in algorithms, build high-quality and responsive web applications and websites, and create intuitive, user-friendly interfaces. In addition, I am highly motivated to secure a professional position in the industry while continuing my studies, allowing me to gain real-world experience and grow continuously as a developer.</p>
-    <h4>short-trem Goals</h3>
-        <p>Over the next few months, I plan to strengthen my foundations in <strong>HTML, CSS, and JavaScript</strong>, deepen my understanding of algorithms and problem-solving, and build several responsive full-stack projects. I also aim to improve my coding best practices, work with Git and modern development tools, and actively prepare for a junior developer position.</p>
+  <div class="wrap">
+    <div class="card">
+      <h1 class="title">My Personal Introduction</h1>
+
+      <hr class="rule" />
+
+      <h2>About Me</h2>
+      <p>
+        Hello! My name is <span class="name">Noam Kadosh</span> and I'm a
+        <span class="emph">passionate learner</span> diving into software and full-stack development.
+        I enjoy building useful products, improving my skills, and creating clean user experiences.
+      </p>
+
+      <hr class="rule" />
+
+      <h2>My Interests</h2>
+      <p>
+        I love <span class="name">coding</span> because it combines creativity with logic.
+        I enjoy working out, spending time with friends, and reading books related to personal development.
+        I also like experimenting with <span class="emph">modern web technologies</span>.
+      </p>
+
+      <hr class="rule" />
+
+      <h2>My Goals</h2>
+      <p>
+        My goal is to become an <span class="name">excellent software developer</span> and stand out in full-stack development.
+        I aim to build high-quality, responsive web apps and create <span class="emph">user-friendly interfaces</span>.
+        I’m also motivated to secure a professional position while continuing my studies to gain real-world experience.
+      </p>
+
+      <hr class="rule" />
+
+      <h2>Short-term Goals</h2>
+      <p>
+        Over the next few months, I plan to strengthen my foundations in
+        <span class="name">HTML, CSS, and JavaScript</span>, improve problem-solving and algorithms,
+        work with Git and modern tools, and build several responsive projects.
+      </p>
+    </div>
+  </div>
 </body>
 </html>

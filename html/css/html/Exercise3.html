@@ -1,59 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 3 - Portfolio</title>
+
+  <style>
+    :root{
+      --bg: #2f3e50;       
+      --bg2:#34485d;    
+      --title:#f39c12;   
+      --red:#e74c3c;        
+      --link:#63c7ff;      
+      --text:#dbe7f3;     
+      --muted:#a9b8c8;   
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header{
+      text-align:center;
+      padding: 18px 16px 10px;
+      border-bottom: 2px solid #223042;
+    }
+    header h1{
+      margin:0;
+      color: var(--title);
+      font-size: 26px;
+      letter-spacing: 1px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .container{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 18px 18px 26px;
+    }
+
+    h2.section-title{
+      margin: 6px 0 10px;
+      color: var(--red);
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .red-line{
+      height: 2px;
+      background: var(--red);
+      border: 0;
+      margin: 10px 0 14px;
+      opacity: .9;
+    }
+
+    .project{
+      margin: 12px 0 18px;
+    }
+
+    .project h3{
+      margin: 0 0 8px;
+      color: #5cc0ff;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .thumb{
+      display:block;
+      width: 290px;
+      height: 135px;
+      object-fit: cover;
+      border-radius: 3px;
+      border: 2px solid rgba(255,255,255,0.08);
+      box-shadow: 0 2px 0 rgba(0,0,0,0.25);
+      margin-bottom: 8px;
+    }
+
+    .desc{
+      margin: 6px 0 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .desc strong{
+      color: var(--text);
+    }
+
+    .links{
+      margin: 6px 0 0;
+      font-size: 13px;
+    }
+    .links a{
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .links a:hover{
+      text-decoration: underline;
+    }
+
+    footer{
+      margin-top: 18px;
+      background: var(--bg2);
+      padding: 14px 14px 10px;
+      border-top: 2px solid var(--red);
+    }
+
+    footer h2{
+      margin: 0 0 10px;
+      color: var(--red);
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    footer ul{
+      margin:0;
+      padding-left: 18px;
+      color: var(--text);
+      font-size: 13px;
+    }
+    footer li{
+      margin: 6px 0;
+    }
+    footer a{
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+  </style>
 </head>
+
 <body>
-    <h1>Exercise 3</h1>
-<header>
+
+  <header id="top">
     <h1>John Doe - Portfolio</h1>
-</header>
-<main>
-    <section>
-        <h2>My Projects</h2>
-        <div name = "Project 1">
-        <h3>Project 1: Water App</h3>
-    
-             <img src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=900&q=60"
-             alt="Storm clouds in the sky representing weather" 
-             width="400"
-             height="300"
-             />
-             <p><Strong>Description: </Strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quibusdam?</p>
+  </header>
 
-             <p class = "Links"> 
-                <a href="https://github.com/" target="_blank">View on GitHub</a>
-                |
-                <a href="https://www.google.com/" target="_blank">Live Demo</a>
-             </p>
-             </div>
-             <div name = "Project 2">
-                <h3>Project 2: Weather Todo List</h3>
-                <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=60" alt="Sticky notes representing a to do list"
-                width="400"
-                height="300">
-                <p><Strong>Description: </Strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, impedit.</p>
-                <p class = "Links"> 
-                    <a href="https://github.com/" target="_blank">View on GitHub</a>
-                    |
-                    <a href="https://www.google.com/" target="_blank">Live Demo</a>
-                 </p>
-             </div>
-        
+  <main class="container">
+    <h2 class="section-title">My Projects</h2>
+    <hr class="red-line" />
+
+    <section class="project">
+      <h3>Project 1: Weather App</h3>
+      <img class="thumb"
+           src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=900&q=60"
+           alt="Storm clouds representing weather" />
+      <p class="desc"><strong>Description:</strong> A weather application with real-time data.</p>
+      <p class="links">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> |
+        <a href="https://www.google.com/" target="_blank" rel="noopener">Demo</a>
+      </p>
     </section>
-    <hr>
-    <footer>
-       <h2>Contact Information</h2>
-       <ul>
-        <li>Email: <a href="Noamkadosh@example.com">Noamkadosh@example.com</a></li>
-        <li>Github <a href="github.com/Noamka3">github.com/Noamka3</a></li>
-        <li>Linkedin <a href="www.linkedin.com/in/noam-kadosh">www.linkedin.com/in/noam-kadosh</a></li>
-       </ul>
-       <a href="Back to top">Back to top</a>
-    </footer>
-</main>
 
+    <section class="project">
+      <h3>Project 2: Todo List</h3>
+      <img class="thumb"
+           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=60"
+           alt="Sticky notes representing a todo list" />
+      <p class="desc"><strong>Description:</strong> Task management with add/edit/delete.</p>
+      <p class="links">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> |
+        <a href="https://www.google.com/" target="_blank" rel="noopener">Demo</a>
+      </p>
+    </section>
+
+    <footer>
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:noamkadosh@example.com">noamkadosh@example.com</a></li>
+        <li>GitHub: <a href="https://github.com/Noamka3" target="_blank" rel="noopener">github.com/Noamka3</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/noam-kadosh" target="_blank" rel="noopener">linkedin.com/in/noam-kadosh</a></li>
+      </ul>
+      <p class="links" style="margin-top:10px;">
+        <a href="#top">Back to top</a>
+      </p>
+    </footer>
+  </main>
 </body>
 </html>

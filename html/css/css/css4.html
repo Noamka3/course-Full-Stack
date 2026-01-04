@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+    <Style>
+        #container{
+            width:215px;
+            background:#bfc4c7;
+             border: 1px solid #888;  
+            position: relative;  
+            font-family: Arial, sans-serif;
+            box-shadow: 8px 8px 10px rgba(0,0,0,0.85);
+
+           
+        }
+        .box{
+            display: inline-block;
+            border: 1px solid #888;
+            width:80px;
+            height:80px;
+            margin-right: 1px;
+            vertical-align: top;
+           
+        }
+        #first {
+        background: #1abc9c; /* טורקיז */
+        }
+
+        #second {
+        background: #e67e22; /* כתום */
+        }
+        .prompt {
+          margin-top: 10px;
+          margin-bottom: 4px;
+        }
+        .button {
+            cursor: pointer;
+            border: 2px solid #1b7a43;
+            background: #2ecc71;
+        }
+
+
+    </Style>
+</head>
+<body>
+    <div id="container">
+      <span class="box" id="first"></span>
+      <span class="box" id="second"></span>
+      <div class="prompt">Name:</div>
+      <input type="text" placeholder="Your name">
+      <div class="prompt">Age:</div>
+      <input type="number" placeholder="How old?">
+      <button class="button">Win</button>
+    </div>
+</body>
+</html>

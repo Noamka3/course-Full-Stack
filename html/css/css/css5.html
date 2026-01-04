@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+    <Style>
+        .table{
+            border-collapse: collapse;
+            width: 620px;
+            background: #dff7df;
+            border: 1px solid #cfcfcf;
+            border-radius: 6px;
+            overflow: hidden;                /* כדי שה-radius יעבוד גם עם thead */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+             }
+        .table thead th{
+          background: #e6e6e6;            /* אפור לכותרת */
+          padding: 8px 10px;
+          font-weight: 700;
+          text-align: left;
+          border-bottom: 1px solid #cfcfcf;
+        }
+        .league td{
+          padding: 8px 10px;
+          border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .league tbody tr:last-child td{
+          border-bottom: none;
+        }
+        .team{
+          font-weight: 700;
+        }
+
+        .pts{
+          font-weight: 700;
+        }   
+    </Style>
+</head>
+<body>
+    <table class="table">
+    <thead>
+      <tr>
+        <th>Pos</th>
+        <th>Team</th>
+        <th>Pld</th>
+        <th>W</th>
+        <th>D</th>
+        <th>L</th>
+        <th>GD</th>
+        <th>Pts</th>
+      </tr>
+    </thead>
+
+ <tbody>
+      <tr>
+        <td>1</td>
+        <td class="team">Hapoel Be'er Sheva</td>
+        <td>26</td>
+        <td>18</td>
+        <td>5</td>
+        <td>3</td>
+        <td>+41</td>
+        <td class="pts">59</td>
+      </tr>
+
+       <tr>
+        <td>2</td>
+        <td class="team">Maccabi Tel Aviv</td>
+        <td>26</td>
+        <td>17</td>
+        <td>5</td>
+        <td>4</td>
+        <td>+26</td>
+        <td class="pts">56</td>
+      </tr>
+      
+      <tr>
+        <td>3</td>
+        <td class="team">Maccabi Petah Tikva</td>
+        <td>26</td>
+        <td>13</td>
+        <td>9</td>
+        <td>4</td>
+        <td>+13</td>
+        <td class="pts">48</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td class="team">Beitar Jerusalem</td>
+        <td>26</td>
+        <td>10</td>
+        <td>10</td>
+        <td>6</td>
+        <td>+7</td>
+        <td class="pts">40</td>
+      </tr>
+
+      <tr>
+        <td>5</td>
+        <td class="team">Bnei Sakhnin</td>
+        <td>26</td>
+        <td>10</td>
+        <td>9</td>
+        <td>7</td>
+        <td>0</td>
+        <td class="pts">39</td>
+      </tr>
+
+      <tr>
+        <td>6</td>
+        <td class="team">Maccabi Haifa</td>
+        <td>26</td>
+        <td>10</td>
+        <td>8</td>
+        <td>8</td>
+        <td>+5</td>
+        <td class="pts">38</td>
+      </tr>
+    </tbody>
+  </table>
+  </table>
+</body>
+</html>

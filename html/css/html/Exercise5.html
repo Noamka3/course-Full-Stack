@@ -1,104 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 5 - Contact Us</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f3f6f9;
+      color:#222;
+    }
+
+    /* center everything */
+    .wrap{
+      max-width: 520px;
+      margin: 30px auto;
+      padding: 0 14px;
+    }
+
+    h1{
+      text-align:center;
+      color:#2b86c5;
+      margin: 0 0 14px;
+      font-size: 32px;
+      font-weight: 800;
+    }
+
+    /* white card */
+    .card{
+      background:#fff;
+      padding: 18px 18px 16px;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    fieldset{
+      border: 2px solid #2a90ff;
+      border-radius: 6px;
+      padding: 14px 12px 12px;
+      margin: 0 0 14px;
+      background:#eef3f6;
+    }
+
+    legend{
+      padding: 0 10px;
+      color:#2a90ff;
+      font-weight: 800;
+    }
+
+    label{
+      display:inline-block;
+      width: 70px;
+      font-weight: 700;
+      color:#364a5b;
+      font-size: 13px;
+    }
+
+
+    select,
+    textarea{
+      width: 120px;
+      padding: 1px 8px;
+      border: 1px solid #b9c7d5;
+      border-radius: 4px;
+      outline: none;
+      font-size: 13px;
+      background:#fff;
+    }
+
+    textarea{
+      width: 320px;
+      max-width: 100%;
+      resize: vertical;
+    }
+
+    .row{ margin: 10px 0; }
+
+    .radio-line{
+      gap: 14px;
+      align-items:center;
+      margin-left: 10px; 
+      font-size: 13px;
+      color:#364a5b;
+      font-weight: 700;
+    }
+    .radio-line label{
+      width:auto;
+      font-weight: 700;
+    }
+
+    .actions{
+      display:flex;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    button{
+      border:0;
+      color:#fff;
+      font-weight: 800;
+      padding: 9px 16px;
+      border-radius: 4px;
+      cursor:pointer;
+      font-size: 13px;
+    }
+    .btn-send{ background:#22a55a; }
+    .btn-reset{ background:#e74c3c; }
+
+  </style>
 </head>
+
 <body>
-    <h1>Exercise5</h1>
-
+  <div class="wrap">
     <h1>Contact Us</h1>
-    <from>
-   <fieldset>
-      <legend>Personal Information</legend>
-      <p>
-        <label for="name">Name:</label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          placeholder="Your name"
-          required
-        />
-      </p>
 
-      <p>
-        <label for="email">Email:</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="your@email.com"
-          required
-        />
-      </p>
+    <div class="card">
+      <form>
+        <fieldset>
+          <legend>Personal Info</legend>
 
-      <p>
-        <label for="phone">Phone:</label>
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          placeholder="(555) 123-4567"
-          required
-        />
-      </p>
-    </fieldset>
-    <fieldset>
-        <legend>Message Details</legend>
-      <p>
-        <label for="subject">Subject:</label>
-        <select id="subject" name="subject" required>
-          <option value="" selected disabled>Select subject</option>
-          <option value="general">General Question</option>
-          <option value="support">Support</option>
-          <option value="feedback">Feedback</option>
-          <option value="business">Business</option>
-        </select>
-      </p>
-      <p>
-        <span>Priority:</span><br />
-        <input id="low" name="priority" type="radio" value="low" required />
-        <label for="low">Low</label>
+          <div class="row">
+            <label for="name">Name:</label>
+            <input id="name" type="text" placeholder="Your name" />
+          </div>
 
-        <input id="medium" name="priority" type="radio" value="medium" />
-        <label for="medium">Medium</label>
+          <div class="row">
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="your@email.com" />
+          </div>
+        </fieldset>
 
-        <input id="high" name="priority" type="radio" value="high" />
-        <label for="high">High</label>
-      </p>
-       <p>
-        <label for="message">Message:</label><br />
-        <textarea
-          name="message"
-          placeholder="Your message..."
-          rows="5"
-          cols="40"
-          required
-        ></textarea>
-      </p>
-    </fieldset>
-     <fieldset>
-      <legend>Preferences</legend>
+        <fieldset>
+          <legend>Message</legend>
 
-      <p>
-        <input id="newsletter" name="newsletter" type="checkbox" value="yes" />
-        <label for="newsletter">Subscribe to newsletter</label>
-      </p>
+          <div class="row">
+            <label for="subject">Subject:</label>
+            <select id="subject">
+              <option selected disabled>Select subject</option>
+              <option>General</option>
+              <option>Support</option>
+              <option>Feedback</option>
+            </select>
+          </div>
 
-      <p>
-        <label for="contactMethod">Contact Method:</label>
-        <select id="contactMethod" name="contactMethod" required>
-          <option value="email" selected>Email</option>
-          <option value="phone">Phone</option>
-        </select>
-      </p>
-    </fieldset>
-    <button type="submit">Send Message</button>
-    <button type="reset">Reset</button>
+          <div class="row">
+            <label>Priority:</label>
+            <div class="radio-line">
+              <span><input type="radio" name="priority" /> Low</span>
+              <span><input type="radio" name="priority" /> High</span>
+            </div>
+          </div>
 
-    </from>
+          <div class="row">
+            <label for="msg">Message:</label>
+          </div>
+          <textarea id="msg" rows="4" placeholder="Your message..."></textarea>
+        </fieldset>
 
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <div class="row" style="margin-left:6px;">
+            <input id="news" type="checkbox" />
+            <label for="news" style="width:auto;">Subscribe to newsletter</label>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button class="btn-send" type="submit">Send Message</button>
+          <button class="btn-reset" type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
