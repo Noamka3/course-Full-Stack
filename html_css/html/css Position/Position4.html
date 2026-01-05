@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .red-background{
+        position: relative;             
+        width: 640px;                    
+        height: 360px;                   
+        background: #d32f2f;             
+        border-radius: 24px;             
+        margin: 30px auto;  
+    }
+    .silver-edges{
+        position: absolute;
+        top: 0;
+        width: 100px;
+        height: 120px;
+        background: #b9c4c8; 
+    }
+    #edge-1{
+        right:0;
+        border-top-right-radius: 24px;
+    }
+    #edge-2{
+        left:0;
+        border-top-left-radius: 24px;
+    }
+    .white-space{
+        position: absolute;
+        background: #fff;
+        top:0;
+        height: 220px;
+        left:100px;
+        right:100px;
+         border-bottom-left-radius: 24px;
+         border-bottom-right-radius: 24px;
+
+    }
+</style>
+<body>
+  <div class="red-background">
+  <div class="silver-edges" id="edge-1"></div>
+  <div class="silver-edges" id="edge-2"></div>
+  <div class="white-space"></div>
+</div>
+</body>
+</html>

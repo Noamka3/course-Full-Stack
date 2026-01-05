@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<style>
+   #parent{
+        position: relative;
+        width:380px;
+        height: 380px;
+        background:blue;        
+    }
+    .child{
+        position: absolute;
+        background: red;
+        
+    }
+    #child-1{
+      top: 0;                    /* מתחיל מהחלק העליון של הדגל */
+      bottom: 0;                 /* יורד עד החלק התחתון (ביחד עם top יוצר גובה מלא) */
+      left: 60px;                /* מרחק מהצד השמאלי (תזיז כדי להתאים לתמונה) */
+      width: 20px;               /* עובי הפס האנכי */
+    }
+    #child-2{
+      left: 0;                   /* מתחיל מהצד השמאלי של הדגל */
+      right: 0;                  /* מגיע עד הצד הימני (ביחד עם left יוצר רוחב מלא) */
+      top: 60px;                 /* מרחק מהחלק העליון (תזיז כדי להתאים לתמונה) */
+      height: 20px;              /* עובי הפס האופקי */
+    }
+</style>
+<body>
+    <div id = "parent">
+        <div class = "child" id="child-1"></div>
+        <div class = "child" id = "child-2"></div>
+    </div>
+    
+</body>
+</html>

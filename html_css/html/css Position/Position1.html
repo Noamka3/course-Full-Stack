@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+<style>
+    .img-box{
+        position: relative;
+         width: min(420px,120%);
+          margin: 0 auto; 
+          border: 2px solid black;
+    }
+    .img-box img{
+        width: 100%;
+        display:block;
+        height: auto;
+    }
+    .tag{
+        position: absolute;
+        padding: 4px 6px;
+        font-size: 14px;
+        font-weight: bold;
+        
+    }
+    .top-left{
+         top: 6px;
+         left: 6px;
+    }
+    .top-right{
+        top:6px;
+        right:6px;
+    }
+    .bottom-left{
+        bottom:6px;
+        left:6px;
+    }
+    .bottom-right{
+        bottom:6px;
+        right:6px;
+    }
+</style>
+<body>
+    <h1>Text on Image!</h1>
+    <div class = "img-box">
+        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX4EbLlkmCJhmk4LI_PxiTc7OrHEkFE_wjeA&s" alt="cat">
+
+        <span class ="tag top-left">Top left</span>
+        <span class ="tag top-right">Top right</span>
+        <span class ="tag bottom-left">Bottom left</span>
+        <span class ="tag bottom-right">Bottom right</span>
+    </div>
+</body>
+</html>
