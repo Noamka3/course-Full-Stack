@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+</head>
+<style>
+* { box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.layout{
+  width: min(900px, 92vw);
+  height: 460px;
+  margin: 60px auto;
+  border: 2px solid #ff5a5a;
+  display: flex;            
+}
+
+
+.sidebar{
+  width: 150px;
+  border-right: 3px solid #ff7b7b;
+
+  display: flex;
+  justify-content: flex-start;   
+  align-items: flex-end;         
+  padding: 22px;                
+}
+
+.burger{
+  width: 72px;
+}
+.burger .C{
+      width: 52px;
+}
+
+.burger span{
+  display: block;
+  height: 10px;
+  background: #ff7b7b;
+  margin: 10px 0;
+}
+.content{
+  flex: 1;                    
+  display: flex;
+  align-items: center;          
+  padding-left: 70px;            
+}
+.content p{
+  width: 95%;
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #222;
+}
+
+
+</style>
+<body>
+ <div class="layout">
+    <div class="sidebar">
+      <div class="burger">
+        <span class = "A"></span>
+        <span class = "A"></span>
+        <span class = "C"></span>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

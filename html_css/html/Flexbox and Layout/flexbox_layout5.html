@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * { box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+
+.card{
+  width: min(900px, 92vw);
+  margin: 70px auto;
+  padding: 28px;
+  background: #dedede;
+}
+
+
+.text{
+  margin: 0 0 28px 0;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #1b1b6d;
+}
+
+
+.gallery{
+  display: flex;
+  gap: 14px;                
+}
+
+
+.big{
+  flex: 2;                  
+  height: 260px;
+  background: #5f8fe8;
+}
+
+.right{
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;                
+  align-content: flex-start; 
+}
+
+.small{
+  width: calc(50% - 7px);    
+  height: 123px;
+  background: #5f8fe8;
+}
+
+</style>
+<body>
+    
+  <div class="card">
+    <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quas ipsam laboriosam laudantium itaque ipsa odit quasi facilis provident enim qui expedita ullam iusto dolorum tempore minus autem, consectetur aperiam repudiandae tenetur. Fuga distinctio maxime sapiente? Eveniet, veniam facilis ab ipsa minus obcaecati eius fugiat?
+       
+    </p>
+
+    <div class="gallery">
+      <div class="big"></div>
+
+      <div class="right">
+        <div class="small"></div>
+        <div class="small"></div>
+        <div class="small"></div>
+        <div class="small"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

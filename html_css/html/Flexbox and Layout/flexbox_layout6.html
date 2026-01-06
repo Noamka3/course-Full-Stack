@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+* { box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.frame{
+    width:min(900px,92vw);
+    height:620px;
+    margin:30px auto;
+    /* padding: 20px; */
+    border: 3px solid #ff7b7b;
+    display: flex;
+    flex-direction: column;
+}
+.top{
+  flex: 1; 
+  border-bottom: 3px solid #ff7b7b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: center; 
+  gap: 22px;
+}
+.circle{
+    width: 120px;
+    height:120px;
+    border-radius: 50%;
+    background: #ff7b7b;
+}
+.text{
+  width: 70%;
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #222;
+}
+.bottom{
+    height:110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-bar{
+  margin: 20px;
+  width: 60px;
+  height: 12px;
+  background: #ff7b7b;
+}
+.right-bars{
+  margin: 20px;
+  display: flex;
+  gap: 16px;
+}
+
+.bar{
+  width: 60px;
+  height: 12px;
+  background: #ff7b7b;
+}
+</style>
+<body>
+    <div class="frame">
+        <div class = "top">
+            <div class = "circle"></div>
+            <p class = "text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, odit, et similique doloremque dolor aliquid rerum ad ex itaque voluptatem eligendi. Officiis nam eveniet animi cupiditate, labore pariatur hic, esse dignissimos facilis cum at distinctio debitis eaque. Tempora ut adipisci totam asperiores amet exercitationem, commodi doloribus?
+                
+            </p>
+        </div>
+        
+   <div class="bottom">
+      <div class="left-bar"></div>
+
+      <div class="right-bars">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
