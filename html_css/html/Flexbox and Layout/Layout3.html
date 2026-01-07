@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; font-family: Arial, sans-serif; }
+
+    body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: linear-gradient(135deg, #6b7cff, #7c3aed);
+    }
+    form.card{
+      width: 520px;
+      height: 520px;
+      background: #fff;
+      border-radius: 14px;
+      padding: 28px 30px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.18); 
+    }
+    .title{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 800;
+        margin: 0px; 
+    }
+    .subtitle{
+         margin: 4px 0 14px;
+        text-align: center;
+        color: #6b7280;
+        font-size: 13px;
+    }
+    .field{ margin-bottom: 8px; }
+    label{ margin-bottom: 4px; font-size: 12px; }
+    
+    .grid-2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+      .field{ margin-bottom: 10px; }
+
+      label{
+        display: block;
+        margin-bottom: 6px;
+        font-size: 13px;
+        color: #374151;
+        font-weight: 700;
+      }
+    input, select, textarea{
+      width: 100%;
+      padding: 12px 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      outline: none;
+      font-size: 14px;
+      background: #fff;
+    }
+    textarea#message{
+      height: 70px;
+      width: 100%;     
+      resize: none;    
+    }
+
+   .checks{
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .checks label{
+      margin: 0;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .checks input{ width: auto; }
+
+    .actions{
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+    .btn{
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      background: #f3f4f6;
+      color: #374151;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-primary{
+      border: none;
+      color: #fff;
+      background: linear-gradient(90deg, #22c55e, #06b6d4);
+      box-shadow: 0 10px 24px rgba(6,182,212,0.25);
+    }
+</style>
+<body>
+<form class="card" action="#" method="post">
+    <h1 class="title">Contact Form</h1>
+    <p class="subtitle">Get in touch with us</p>
+
+    <div class="grid-2">
+      <div class="field">
+        <label for="first">First Name</label>
+        <input id="first" name="first" type="text" placeholder="John" required />
+      </div>
+
+      <div class="field">
+        <label for="last">Last Name</label>
+        <input id="last" name="last" type="text" placeholder="Doe" required />
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="email">Email Address</label>
+      <input id="email" name="email" type="email" placeholder="your@email.com" required />
+    </div>
+
+    <div class = "grid-2">
+        <div class="field">
+            <label for="subject">Subject</label>
+            <select id ="Subject" name = "Subject" required>
+                    <option value="">Select a subject</option>
+                    <option value="support">Support</option>
+                    <option value="sales">Sales</option>
+                    <option value="feedback">Feedback</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="Priority">Priority</label>
+            <select id = "Priority" name = "Priority" required>
+                    <option value="low">Low</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us how we can Help..." rows="4" required></textarea>
+        </div>
+     <div class="field">
+      <label>Contact Preferences</label>
+      <div class="checks">
+        <label><input type="checkbox" name="prefs" value="email-updates" /> Email Updates</label>
+        <label><input type="checkbox" name="prefs" value="phone-followup" /> Phone Follow-up</label>
+        <label><input type="checkbox" name="prefs" value="newsletter" /> Newsletter</label>
+      </div>
+    </div>
+        <div class="actions">
+      <button type="button" class="btn">Save Draft</button>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </div>
+
+    </form>
+ </div>
+</body>
+</html>

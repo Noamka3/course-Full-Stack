@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+<style>
+    * { box-sizing: border-box; }
+    body { margin: 0;
+         font-family: Arial, sans-serif;
+         }
+    .page{
+        min-height: 100vh;
+        display:flex;
+        flex-direction: column;
+    }
+    .header{
+     padding: 16px 20px;
+     color:white;
+     background:linear-gradient(90deg, #5b6cff, #7c3aed); 
+    }
+    .layout{
+        flex:1;
+        display: flex;
+        align-items: stretch;
+    }
+    .nav{
+        width: 220px;
+        padding: 16px;
+        background: #f3f4f6;
+        border-right: 1px solid #e5e7eb;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }   
+    .main{
+        flex:1;
+        padding: 20px;
+        background: #fff;
+    }
+    .card , .box{
+      margin-top: 12px;
+      padding: 12px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+    }
+    .sidebar{
+        background:#f8fafc;
+        width: 260px;
+        padding: 16px;
+        border-left: 1px solid #e5e7eb;
+    }
+    .nav a{ 
+        color: #374151;
+        text-decoration: none;  
+    }
+    .nav a:hover{ 
+        text-decoration: underline; 
+    }
+    .footer{
+        padding: 18px 20px;
+        background: #2f3640;
+        color: #fff;
+        text-align: center;
+    }
+    .minifooter{
+        margin-top:8px; 
+        font-size: 12px; 
+        opacity: .85;
+        color:#e5e7eb
+    }
+    .mininav a{
+        color:#e5e7eb;
+        text-decoration: none;
+    }
+
+
+</style>
+<body>
+<div class="page">
+        <header class = "header"> Holy Grail Layout Demo</header>
+    <div class ="layout">
+        <nav class ="nav">
+            <h3>Navigation</h3>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Potofolio</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+     <main class="main">
+         <h2>Welcome to the Holy Grail Layout</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias corporis voluptatum facere exercitationem laudantium, consequatur nisi ad consequuntur. Ab nihil sed, enim magnam rerum odit.</p>
+        <div class = "card">
+            <h3>Key Features</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias corporis voluptatum facere exercitationem laudantium, consequatur nisi ad consequuntur. Ab nihil sed, enim magnam rerum odit.</p>
+        </div>
+     </main>
+     <aside class="sidebar">
+        <h3>Sidebar</h3>
+        <div class = "box">
+          <h4> Quick Info </h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, cumque?</p>
+        </div>
+        <div class = "box">
+            <h4> Latest News </h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, cumque?</p>
+          </div>
+     </aside>
+    </div>
+    
+    <footer class="footer">
+      © 2025 Holy Grail Layout Demo. Built with CSS Flexbox.
+      <div class="minifooter">
+           <nav class ="mininav">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Support</a>
+        </nav>
+      </div>
+    </footer>
+</div>
+</body>
+</html>

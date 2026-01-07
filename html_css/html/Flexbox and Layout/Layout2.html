@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<style>
+    /* * { box-sizing: border-box; } */
+    body { 
+        margin: 0; 
+        padding: 0;
+        font-family: Arial, sans-serif;
+     }
+     .navbar{
+         background: #6b5bd6;
+         color:white;
+         position:relative;
+     }
+     .nav{
+        margin: 0;
+        list-style: none;
+        display:flex;
+        align-items: center;
+        gap:6px;
+        padding: 16px;
+     }
+     .nav > li{
+        position: relative;
+     }
+   .nav a {
+      display: block;
+      padding: 10px 14px;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+    .nav a:hover{
+        background: rgba(255,255,255,0.28);
+        transform: translateY(0);
+    }
+     .space {
+      margin-left: auto;
+    }
+    .dropdown-menu {
+        display:none;
+        position: absolute;
+        top: 80%;
+        left: 10px;
+        background: rgba(144, 142, 142, 0.7);
+        border-radius: 10px;
+        padding: 0px 0;
+        margin-top: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+         color: #111;
+         min-width: 160px; 
+          
+    }
+
+    .has-dropdown:hover .dropdown-menu{
+        display:block;
+        
+    }
+    .dropdown-menu a {
+      color: White;
+      padding: 10px 14px;
+      border-radius: 0;
+      transition: background 0.12s ease;
+    }
+
+    .dropdown-menu a:hover {
+      background: #6b5bd6;
+      transform: none;
+    }
+    .content {
+      padding: 28px;
+      background: #f6f7fb;
+      min-height: calc(100vh - 52px);
+    }
+    .card {
+      max-width: 900px;
+      background: white;
+      margin: 0 auto;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    .card h1 { margin: 0 0 12px; }
+    .card p { margin: 0; color: #334155; line-height: 1.6; }
+</style>
+<body>
+    <header class = "navbar">
+        <ul class = "nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li class = "has-dropdown">
+                <a href="#">Services</a>
+                <ul class = "dropdown-menu">
+                    <a href="#">Web Development</a>
+                    <a href="#">Mobile Apps</a>
+                    <a href="#">Digital Marketing</a>
+                    <a href="#">Consulting</a>
+                    <a href="#">Support</a>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+
+            <li class ="space"></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Cart</a></li>
+        </ul>
+    </header>
+   <main class="content">
+    <div class="card">
+      <h1>Welcome to Our Website</h1>
+      <p>
+        This is the main content area. The dropdown menu should render on top of this content
+        when you hover "Services", demonstrating a proper overlay using position + z-index.
+      </p>
+    </div>
+  </main>
+    
+</body>
+</html>
