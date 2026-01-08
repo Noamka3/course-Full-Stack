@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<style>
+    .title > h3{
+        color: #6b5bd6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 16px;
+    }
+    .title > p{
+        text-align: center;
+    }
+
+    @media (max-width:768px){
+        .title > h3{
+           font-size: 48px;
+        }
+        .title > p {
+            font-size: 18px;
+        }
+    }
+    @media (max-width: 900px) and (min-width:600px)
+    {
+        .title > h3{
+            font-size: 36px;
+        }
+        .title > p {
+            font-size: 16px;
+        }
+    }
+    @media (max-width:599px){
+        .title > h3{
+            font-size: 24px;
+        }
+        .title > p {
+            font-size: 14px;
+        }
+    }
+</style>
+<body>
+    <header class= "title">
+        <h3>Responsive Design</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eius, qui omnis atque neque totam veniam exercitationem distinctio fuga dolorem a architecto repudiandae rem officiis quidem! Dolore sequi, non odio ullam adipisci neque quos architecto corporis, nisi error blanditiis. Saepe unde officiis deleniti nisi vero?</p>
+    </header>
+</body>
+</html>

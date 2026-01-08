@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+</head>
+<style>
+
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#0f172a;
+
+  /* background מסודר */
+  background:
+    radial-gradient(1200px 600px at 10% 0%, #dbeafe 0%, transparent 55%),
+    radial-gradient(1000px 600px at 90% 10%, #ede9fe 0%, transparent 55%),
+    #f8fafc;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* אופציונלי: עושה תחושה יפה */
+}
+
+    .wrap{
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 18px 16px 40px;
+    }
+     .gallery{
+        --gap: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap);
+     }
+    .card img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        height: auto; 
+        display: flex;
+        object-fit: cover;     /* חותך יפה */
+        object-position: center;
+    }
+    .card{
+        display: flex;
+        width: calc((100% - (2 * var(--gap))) / 3);
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+
+
+    }
+
+    .label{
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        background: rgba(15, 23, 42, 0.55);
+        color: rgba(255, 255, 255, 0.92);
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 12px; 
+        backdrop-filter: blur(6px);
+    }
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.40);
+    }
+
+
+    @media (max-width: 900px) and (min-width: 600px){
+    .card {
+    width: calc((100% - (1 * var(--gap))) / 2);
+    border-radius: 16px;
+    }
+    }
+  @media (max-width: 599px) {
+  .card {
+    width: 100%;
+    border-radius: 14px;
+   }
+
+  .card img {
+    height: 210px;
+    }
+}
+    
+</style>
+    <body>
+    <main class = "wrap">
+        <section class = "gallery" aria-label="Image gallery">
+
+            <a class = "card"  href="https://picsum.photos/id/1015/1600/1000" target="_blank" rel="noopener noreferrer">
+                <img src="https://picsum.photos/id/1015/1200/750" alt="Gallery image 1">
+                <span class = "label"> Image 1</span>
+            </a>
+
+            <a class="card" href="https://picsum.photos/id/1025/1000/1500" target="_blank" rel="noopener noreferrer">
+                <img src="https://picsum.photos/id/1025/800/1200" alt="Gallery image 2">
+                <span class="label">Image 2</span>
+            </a>
+
+            <a class="card" href="https://picsum.photos/id/1035/1200/1200" target="_blank" rel="noopener noreferrer">
+                  <img src="https://picsum.photos/id/1035/900/900" alt="Gallery image 3">
+                       <span class="label">Image 3</span>
+            </a>
+
+            <a class="card" href="https://picsum.photos/id/1043/1700/1100" target="_blank" rel="noopener noreferrer">
+                <img src="https://picsum.photos/id/1043/1200/800" alt="Gallery image 4">
+                <span class="label">Image 4</span>
+            </a>
+
+            <a class="card" href="https://picsum.photos/id/1062/1100/1600" target="_blank" rel="noopener noreferrer">
+                 <img src="https://picsum.photos/id/1062/900/1300" alt="Gallery image 5">
+                 <span class="label">Image 5</span>
+            </a>
+
+            <a class="card" href="https://picsum.photos/id/1074/1800/900" target="_blank" rel="noopener noreferrer">
+                 <img src="https://picsum.photos/id/1074/1200/600" alt="Gallery image 6">
+                 <span class="label">Image 6</span>
+            </a>
+
+        </section>
+    </main>
+</body>
+</html>

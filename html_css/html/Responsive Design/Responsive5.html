@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+</head>
+<style>
+    body{
+      background: #f5f7ff;
+      color: #111827;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .page{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+    }
+    .card{
+        background: #fff;
+        width: min(920px, 100%);
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;;
+        box-shadow: 0 0 0 14px rgba(99, 102, 241, 0.55);
+    }
+    .media{
+         flex: 0 0 38%;
+         min-height: 260px;
+         display: grid;
+         place-items: center;
+         background: linear-gradient(135deg, #5b6cff, #7c3aed);
+        }
+    .icon{
+       width: 82px;
+       height: 82px;
+       border-radius: 999px;
+       background: rgba(255,255,255,0.20);
+       display: grid;
+       align-items: center;
+       justify-content: center;
+       font-size: 40px;
+}
+.content{
+  flex: 1;
+  padding: 34px 36px;
+}
+.title{
+  margin: 0 0 12px;
+  font-size: 34px;     
+  font-weight: 700;
+  color: #1f2937;
+}
+.desc{
+  margin: 0 0 22px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+.row{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.price{
+  font-size: 26px;
+  font-weight: 600;
+  color: #ef4444;
+}
+.btn{
+ 
+  border: 0;
+  padding: 8px 8px;
+  border-radius: 10px;
+  background: #6366f1;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+}
+.btn:hover{
+  filter: brightness(0.95);
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .page{
+    padding: 32px;
+    place-items: start center; 
+  }
+  .card{
+    flex-direction: column;
+    width: min(520px,100%);
+    border-radius: 12px;
+    box-shadow: none;
+  }
+  .media{
+    min-height: 220px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+    .content{
+    padding: 18px 18px 16px;
+  }
+    .title{ font-size: 22px; }
+  .desc{ font-size: 13px; }
+  .price{ font-size: 20px; }
+
+  /* שורה תחתונה: מחיר משמאל, כפתור מימין (כמו בתמונה) */
+  .row{
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .btn{
+    width: auto;
+    padding: 10px 16px;
+    border-radius: 10px;
+  }
+}
+@media(max-width: 599px) 
+   {
+    .page{
+    padding: 32px;
+    place-items: start center; 
+  }
+  
+  .card{
+    display: flex;
+    flex-direction: column;
+    width: min(520px,100%);
+    border-radius: 2px;
+        box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.55);
+  }
+  .content{
+    text-align: center;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .desc{
+    font-size: 12px;
+  }
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+  .btn{
+    width: 100%;
+    border-radius: 3px;
+  }
+   
+}
+
+
+
+</style>
+<body>
+    <main class = "page">
+        <div class = "card">
+          <div class="media" aria-hidden="true">
+             <div class="icon">📷</div>
+          </div>
+
+
+            <div class = "content">
+             <h2 class = "title">Premium LapTop</h2>
+             <p class = "desc">
+                Lorem, ipsum dolor sit amet consectetur 
+                adipisicing elit. Eum, fugiat architecto? 
+                Nisi soluta nulla officiis? Corrupti quidem 
+                quae eius reiciendis repellat. Assumenda dolorem 
+                quas accusamus.
+             </p>
+             <div class ="row">
+             <div class ="price"> $1299</div>
+             <buttom class = "btn" type = "buttom"> Add to Cart</buttom>
+            </div>
+
+        </div>
+
+    </main>
+</body>
+</html>
