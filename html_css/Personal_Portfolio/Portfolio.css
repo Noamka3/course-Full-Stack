@@ -177,7 +177,11 @@ a {
 
 
 
-.skills { display: grid; gap: 14px; }
+.skills {   
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
 .skill-top {
   display: flex;
   justify-content: space-between;
