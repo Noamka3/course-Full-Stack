@@ -106,10 +106,10 @@ const date = 3
 
 const kitchen = {
     owner: "Geraldine",
-    hasOven: true/false, // choose one
+    hasOven: true/false,
     fridge: {
         price: 500,
-        works: true/false, // choose one
+        works: true/false, 
         items: [
             { name: "cheese", expiryDate: 7 },
             { name: "radish", expiryDate: 2 },
