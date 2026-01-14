@@ -106,7 +106,11 @@ const date = 3
 
 const kitchen = {
     owner: "Geraldine",
+<<<<<<< HEAD
     hasOven: true/false,
+=======
+    hasOven: true/false, 
+>>>>>>> 3077597 (JavaScript 13-14/1 - callback,Array,Object this)
     fridge: {
         price: 500,
         works: true/false, 
