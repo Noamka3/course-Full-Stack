@@ -1,6 +1,10 @@
 # dependencies
 node_modules/
+quiz-app/
 
+# but allow the folder + the single file quiz.js
+!JavaScript & Algo/console App/quiz-app/
+!JavaScript & Algo/console App/quiz-app/quiz.js
 # logs
 npm-debug.log*
 yarn-debug.log*
