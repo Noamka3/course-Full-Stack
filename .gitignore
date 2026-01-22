@@ -1,6 +1,7 @@
 # dependencies
 node_modules/
 quiz-app/
+js-algo-practice-main/
 
 # but allow the folder + the single file quiz.js
 !JavaScript & Algo/console App/quiz-app/
