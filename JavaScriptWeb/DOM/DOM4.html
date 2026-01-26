@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 4 - Form</title>
+  <style>
+    :root{
+      --bg: #1fb79a;        /* ירוק-טורקיז כמו בתמונה */
+      --text: #0a2a25;
+      --shadow: rgba(0,0,0,0.25);
+      --error: #d92d20;
+      --btn: #0f8f79;
+      --btnHover: #0c7b67;
+      --border: rgba(0,0,0,0.18);
+    }
+
+    body{
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+
+    .frame{
+      width: 760px;
+      max-width: calc(100vw - 32px);
+      background: var(--bg);
+      border-radius: 10px;
+      box-shadow: 0 10px 30px var(--shadow);
+      padding: 32px 34px 28px;
+      border: 6px solid rgba(255,255,255,0.35);
+      position: relative;
+    }
+
+    .row{ margin-bottom: 22px; }
+
+    label{
+      display: block;
+      font-size: 34px;
+      letter-spacing: 1px;
+      color: var(--text);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    input{
+      width: 100%;
+      box-sizing: border-box;
+      height: 62px;
+      font-size: 32px;
+      padding: 10px 14px;
+      border-radius: 4px;
+      border: 2px solid var(--border);
+      background: #fff;
+      outline: none;
+      box-shadow: inset 0 2px 0 rgba(0,0,0,0.05);
+    }
+
+
+    .grid2{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 38px;
+      align-items: end;
+    }
+
+
+    .bottom{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    #error{
+      min-height: 32px;
+      font-size: 34px;
+      color: var(--error);
+      font-weight: 700;
+      text-transform: lowercase;
+    }
+
+    button{
+      height: 74px;
+      padding: 0 26px;
+      font-size: 34px;
+      border-radius: 8px;
+      border: 0;
+      cursor: pointer;
+      background: var(--btn);
+      color: #08302a;
+      box-shadow: 0 8px 18px var(--shadow);
+    }
+
+    button:hover{ background: var(--btnHover); }
+    button:active{ transform: translateY(1px); }
+
+
+    input[type="date"]{
+      font-size: 28px;
+      padding-top: 14px;
+    }
+
+
+    .ok{
+      color: #064e3b;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="frame">
+    <div class="row">
+      <label for="name">Name</label>
+      <input id="name" type="text" />
+    </div>
+
+    <div class="row grid2">
+      <div>
+        <label for="salary">Salary</label>
+        <input id="salary" type="number" placeholder="Salary" />
+      </div>
+      <div>
+        <label for="birthday">Birthday</label>
+        <input id="birthday" type="date" />
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="phone">Phone</label>
+      <input id="phone" type="text" inputmode="numeric" placeholder="Number" />
+    </div>
+
+    <div class="bottom">
+      <div id="error"></div>
+      <button id="submit" type="button">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    const nameEl = document.getElementById("name");
+    const salaryEl = document.getElementById("salary");
+    const birthdayEl = document.getElementById("birthday");
+    const phoneEl = document.getElementById("phone");
+    const errorEl = document.getElementById("error");
+    const submitBtn = document.getElementById("submit");
+
+    // עוזר: להשאיר רק ספרות
+    function onlyDigits(str) {
+      return str.replace(/\D/g, "");
+    }
+
+    function showError(msg) {
+      errorEl.classList.remove("ok");
+      errorEl.textContent = msg;
+    }
+
+    function showSuccess(msg) {
+      errorEl.classList.add("ok");
+      errorEl.textContent = msg;
+    }
+
+    function validate() {
+      errorEl.textContent = "";
+
+      const name = nameEl.value.trim();
+      const salary = Number(salaryEl.value);
+      const birthday = birthdayEl.value;
+      const phoneDigits = onlyDigits(phoneEl.value);
+
+      // לפי התמונה: מציגים שגיאה אחת בכל פעם (הראשונה שמוצאים)
+      if (name.length === 0) return showError("name is missing");
+      if (name.length <= 2) return showError("name must be longer than 2 characters");
+
+      if (!salaryEl.value) return showError("salary is missing");
+      if (!(salary > 10000 && salary < 16000)) return showError("salary must be 10000-16000");
+
+      if (!birthday) return showError("birthday is missing");
+
+      if (phoneDigits.length === 0) return showError("phone is missing");
+      if (phoneDigits.length !== 10) return showError("phone must be 10 digits");
+
+      showSuccess("looks good");
+      console.log({ name, salary, birthday, phone: phoneDigits });
+    }
+
+    submitBtn.addEventListener("click", validate);
+
+    // לנקות את השגיאה כשמתחילים להקליד
+    [nameEl, salaryEl, birthdayEl, phoneEl].forEach(el => {
+      el.addEventListener("input", () => { errorEl.textContent = ""; });
+    });
+
+    // להגביל טלפון לספרות בלבד בזמן אמת
+    phoneEl.addEventListener("input", () => {
+      phoneEl.value = onlyDigits(phoneEl.value).slice(0, 10);
+    });
+  </script>
+</body>
+</html>

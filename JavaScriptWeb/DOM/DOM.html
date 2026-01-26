@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arrow Ball Game (Single File)</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      margin: 24px;
+    }
+
+    h1{
+      margin: 0 0 12px 0;
+      font-size: 20px;
+    }
+
+    #board{
+      position: relative;
+      width: 520px;
+      height: 320px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+
+    #ball{
+      position: absolute; /* חובה כדי להזיז עם left/top */
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: crimson;
+      left: 10px;
+      top: 10px;
+    }
+
+    .controls{
+      display: inline-grid;
+      grid-template-columns: 56px 56px 56px;
+      grid-template-rows: 56px 56px 56px;
+      gap: 8px;
+      align-items: center;
+      justify-items: center;
+      user-select: none;
+    }
+
+    .arrow{
+      width: 56px;
+      height: 56px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 22px;
+      background: #f5f5f5;
+    }
+
+    .arrow:active{
+      transform: translateY(1px);
+    }
+
+    /* סידור החצים כמו מקשים */
+    #up{ grid-column: 2; grid-row: 1; }
+    #left{ grid-column: 1; grid-row: 2; }
+    #down{ grid-column: 2; grid-row: 3; }
+    #right{ grid-column: 3; grid-row: 2; }
+
+  </style>
+</head>
+
+<body>
+  <h1>משחק כדור עם חצים </h1>
+
+  <div id="board">
+    <div id="ball" aria-label="ball"></div>
+  </div>
+
+  <div class="controls" aria-label="controls">
+    <div id="up" class="arrow" role="button" tabindex="0">↑</div>
+    <div id="left" class="arrow" role="button" tabindex="0">←</div>
+    <div id="right" class="arrow" role="button" tabindex="0">→</div>
+    <div id="down" class="arrow" role="button" tabindex="0">↓</div>
+  </div>
+
+
+
+  <script>
+    const board = document.querySelector("#board");
+    const ball = document.querySelector("#ball");
+
+    const upArrow = document.querySelector("#up");
+    const downArrow = document.querySelector("#down");
+    const leftArrow = document.querySelector("#left");
+    const rightArrow = document.querySelector("#right");
+
+    const STEP = 12; // כמה פיקסלים לזוז בכל פעולה
+
+    // מצב נוכחי של הכדור
+    let x = 10;
+    let y = 10;
+
+    function moveBall(dx, dy) {
+      // גבולות הלוח (כדי לא לצאת החוצה)
+      const maxX = board.clientWidth - ball.clientWidth;
+      const maxY = board.clientHeight - ball.clientHeight;
+
+      x = Math.max(0, Math.min(maxX, x + dx));
+      y = Math.max(0, Math.min(maxY, y + dy));
+
+      ball.style.left = `${x}px`;
+      ball.style.top = `${y}px`;
+    }
+
+    // לחיצות על החצים
+    upArrow.addEventListener("click", () => moveBall(0, -STEP));
+    downArrow.addEventListener("click", () => moveBall(0, STEP));
+    leftArrow.addEventListener("click", () => moveBall(-STEP, 0));
+    rightArrow.addEventListener("click", () => moveBall(STEP, 0));
+
+    // תמיכה במקשי חיצים במקלדת
+    document.addEventListener("keydown", (e) => {
+      switch (e.key) {
+        case "ArrowUp":
+          moveBall(0, -STEP);
+          break;
+        case "ArrowDown":
+          moveBall(0, STEP);          break;
+        case "ArrowLeft":
+          moveBall(-STEP, 0);
+          break;
+        case "ArrowRight":
+          moveBall(STEP, 0);
+          break;
+      }
+    });
+  </script>
+</body>
+</html>
