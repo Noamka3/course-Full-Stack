@@ -17,13 +17,29 @@ export class ApiService {
   }
 
   async getPokemonCount() {
-  const url = "https://pokeapi.co/api/v2/pokemon?limit=1";
-  return this.fetchJson(url); // יחזיר אובייקט עם count
+  const url = "https://pokeapi.co/api/v2/pokemon?limit=0";
+  return this.fetchJson(url); 
 }
 
-async getPokemonById(id) {
-  const url = `https://pokeapi.co/api/v2/pokemon/${id}/`;
+async getRandomPokemon() {
+  const { count } = await this.getPokemonCount();
+
+  const offset = Math.floor(Math.random() * count); // 0..count-1
+  const listUrl = `https://pokeapi.co/api/v2/pokemon?limit=1&offset=${offset}`;
+
+  const listData = await this.fetchJson(listUrl);
+  const pokemonUrl = listData.results[0].url; // URL תקין לפוקימון
+
+  return this.fetchJson(pokemonUrl); // מחזיר את הפוקימון המלא
+}
+
+
+
+// 2 פסקאות שיחזיר בדיוק
+async getBaconText(paras = 2) {
+  const url = `https://baconipsum.com/api/?type=meat-and-filler&paras=${paras}&format=json`;
   return this.fetchJson(url);
 }
+
 
 }

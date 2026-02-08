@@ -34,6 +34,8 @@ export class PageController {
 
       await this.generateQuote();
       await this.generatePokemon();
+      await this.generateAboutMe();
+
 
 
       this.dom.status.textContent = "✅ Page rendered";
@@ -47,15 +49,22 @@ export class PageController {
   }
 
   // Pokemon
-  async generatePokemon() {
-  const listData = await this.api.getPokemonCount();
-  const max = listData.count;
-
-  const randomId = Math.floor(Math.random() * max) + 1; // 1..max
-
-  const pokemon = await this.api.getPokemonById(randomId);
+async generatePokemon() {
+  const pokemon = await this.api.getRandomPokemon();
   this.renderPokemon(pokemon);
 }
+
+renderPokemon(pokemon) {
+  this.dom.pokemonName.textContent = pokemon.name;
+
+  const img = pokemon.sprites.front_default;
+  if (img) {
+    this.dom.pokemonImg.src = img;
+  } else {
+    this.dom.pokemonImg.removeAttribute("src");
+  }
+}
+
 
 
   // Kanye Quote
@@ -67,11 +76,19 @@ async generateQuote() {
   this.renderQuote(data);
 }
 
-// שם הפוקימון והתמונה שלו
-renderPokemon(pokemon) {
-  this.dom.pokemonName.textContent = pokemon.name; 
-  this.dom.pokemonImg.src = pokemon.sprites.front_default;
+
+async generateAboutMe() {
+  const paragraphs = await this.api.getBaconText(2);
+  this.renderAboutMe(paragraphs);
 }
+
+
+renderAboutMe(paragraphs) {
+  // paragraphs -> זה מערך של strings
+  this.dom.aboutMe.textContent = paragraphs.join("\n\n");
+}
+
+
 
 
 }

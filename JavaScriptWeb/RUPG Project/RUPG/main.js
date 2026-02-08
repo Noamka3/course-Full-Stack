@@ -11,6 +11,7 @@ const dom = {
   quote: document.getElementById("quote"),
   pokemonImg: document.getElementById("pokemon-img"),
   pokemonName: document.getElementById("pokemon-name"),
+  aboutMe: document.getElementById("about"),
 };
 
 const api = new ApiService();

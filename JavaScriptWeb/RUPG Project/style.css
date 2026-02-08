@@ -116,7 +116,9 @@ body {
   max-width: none;
   margin: 22px 0 14px;
 }
-
+#about {
+  white-space: pre-line;
+}
 /* About */
 .about{
   max-width: 640px;
