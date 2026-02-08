@@ -9,6 +9,8 @@ const dom = {
   status: document.getElementById("status"),
   btn: document.getElementById("btn-generate"),
   quote: document.getElementById("quote"),
+  pokemonImg: document.getElementById("pokemon-img"),
+  pokemonName: document.getElementById("pokemon-name"),
 };
 
 const api = new ApiService();

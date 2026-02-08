@@ -15,4 +15,15 @@ export class ApiService {
     const url = "https://api.kanye.rest/";
     return this.fetchJson(url);
   }
+
+  async getPokemonCount() {
+  const url = "https://pokeapi.co/api/v2/pokemon?limit=1";
+  return this.fetchJson(url); // יחזיר אובייקט עם count
+}
+
+async getPokemonById(id) {
+  const url = `https://pokeapi.co/api/v2/pokemon/${id}/`;
+  return this.fetchJson(url);
+}
+
 }

@@ -33,6 +33,8 @@ export class PageController {
       this.renderRandomUsers(data);
 
       await this.generateQuote();
+      await this.generatePokemon();
+
 
       this.dom.status.textContent = "✅ Page rendered";
     } catch (err) {
@@ -44,12 +46,31 @@ export class PageController {
     }
   }
 
+  // Pokemon
+  async generatePokemon() {
+  const listData = await this.api.getPokemonCount();
+  const max = listData.count;
+
+  const randomId = Math.floor(Math.random() * max) + 1; // 1..max
+
+  const pokemon = await this.api.getPokemonById(randomId);
+  this.renderPokemon(pokemon);
+}
+
+
+  // Kanye Quote
   renderQuote(data) {
     this.dom.quote.textContent = data.quote;
   }
 async generateQuote() {
   const data = await this.api.getKanyeQuote();
   this.renderQuote(data);
+}
+
+// שם הפוקימון והתמונה שלו
+renderPokemon(pokemon) {
+  this.dom.pokemonName.textContent = pokemon.name; 
+  this.dom.pokemonImg.src = pokemon.sprites.front_default;
 }
 
 
