@@ -32,7 +32,9 @@ export class PageController {
       const data = await this.api.getRandomUsers7();
       this.renderRandomUsers(data);
 
-      this.dom.status.textContent = "✅ RandomUser rendered";
+      await this.generateQuote();
+
+      this.dom.status.textContent = "✅ Page rendered";
     } catch (err) {
       console.error(err);
       this.dom.status.textContent = `❌ ${err.message}`;
@@ -41,4 +43,14 @@ export class PageController {
       this.dom.btn.textContent = "Generate User";
     }
   }
+
+  renderQuote(data) {
+    this.dom.quote.textContent = data.quote;
+  }
+async generateQuote() {
+  const data = await this.api.getKanyeQuote();
+  this.renderQuote(data);
+}
+
+
 }

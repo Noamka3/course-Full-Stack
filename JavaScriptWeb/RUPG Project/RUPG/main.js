@@ -8,6 +8,7 @@ const dom = {
   friendsList: document.getElementById("friends-list"),
   status: document.getElementById("status"),
   btn: document.getElementById("btn-generate"),
+  quote: document.getElementById("quote"),
 };
 
 const api = new ApiService();

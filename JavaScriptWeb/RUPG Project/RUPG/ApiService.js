@@ -9,4 +9,10 @@ export class ApiService {
     const url = "https://randomuser.me/api/?results=7&inc=name,location,picture&noinfo";
     return this.fetchJson(url);
   }
+
+
+  async getKanyeQuote(){
+    const url = "https://api.kanye.rest/";
+    return this.fetchJson(url);
+  }
 }
