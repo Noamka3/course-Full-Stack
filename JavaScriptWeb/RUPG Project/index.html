@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RUPG</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="page">
+    <section class="top-card">
+      <img
+        id="user-img"
+        class="avatar"
+        alt="User"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+      />
+
+      <div class="top-text">
+        <div id="user-name" class="user-name">—</div>
+        <div id="user-loc" class="user-loc">—</div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT + FRIENDS -->
+    <section class="content">
+      <!-- LEFT CONTENT -->
+      <div class="left">
+        <div class="block">
+          <div class="label">Favorite quote:</div>
+          <div id="quote" class="quote">—</div>
+          <div class="quote-author">— Kanye West</div>
+        </div>
+
+        <div class="block pokemon-row">
+          <img
+            id="pokemon-img"
+            class="poke-img"
+            alt="Pokemon"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+          />
+
+          <div class="poke-text">
+            <span class="label-inline">Favorite Pokemon:</span>
+            <span id="pokemon-name" class="poke-name">—</span>
+          </div>
+        </div>
+
+        <hr class="sep" />
+
+        <div class="block">
+          <div class="label">About me</div>
+          <div id="about" class="about">—</div>
+        </div>
+
+        <button id="btn-generate" class="btn-generate">Generate User</button>
+
+        <!-- optional status line (errors/loading) -->
+        <div id="status" class="status"></div>
+      </div>
+
+      <!-- RIGHT FRIENDS SIDEBAR -->
+      <aside class="friends">
+        <div class="friends-title">Friends</div>
+        <ul id="friends-list" class="friends-list">
+        </ul>
+      </aside>
+    </section>
+  </div>
+
+  <script type="module" src="./RUPG/main.js"></script>
+</body>
+</html>
