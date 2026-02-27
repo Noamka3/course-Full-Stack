@@ -1,0 +1,17 @@
+const recipes = [
+  {
+  id: "unique-id",
+  title: "Recipe Title",
+  description: "Brief description",
+  ingredients: ["ingredient 1", "ingredient 2"],
+  instructions: ["step 1", "step 2"],
+  cookingTime: 30, // in minutes
+  servings: 4,
+  difficulty: "easy", // easy, medium, hard
+  rating: 4.5,
+  createdAt: "2025-01-01T00:00:00.000Z"
+}
+
+];
+
+module.exports = { recipes };
