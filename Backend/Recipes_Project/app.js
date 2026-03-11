@@ -78,7 +78,7 @@ app.get("/api/recipes", (req,res,next) =>{
     if(maxCookingTime){
         const max = Number(maxCookingTime);
         if(isNaN(max)){
-            result = res.status(400).json({message:"Invalid maxCookingTime"});
+            return res.status(400).json({message:"Invalid maxCookingTime"});
 
         }
         result = result.filter((r) => r.cookingTime <= max);

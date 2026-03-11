@@ -1,0 +1,89 @@
+[
+  {
+    "id": "19c9ead2-1d12-4373-8997-d11bf071228f",
+    "title": "Pasta Carbonara",
+    "description": "Classic Italian pasta dish",
+    "ingredients": [
+      "pasta",
+      "eggs",
+      "cheese"
+    ],
+    "instructions": [
+      "boil pasta",
+      "mix eggs",
+      "combine"
+    ],
+    "cookingTime": 20,
+    "servings": 2,
+    "difficulty": "easy",
+    "rating": 4.5,
+    "createdAt": "2026-02-26T16:57:12.062Z"
+  },
+  {
+    "id": "bf6e3835-0f31-4cbb-8180-2c5bd1cf0ee6",
+    "title": "Updated Pasta Carbonara",
+    "description": "Classic Italian pasta dish updated",
+    "ingredients": [
+      "pasta",
+      "eggs",
+      "cheese",
+      "bacon"
+    ],
+    "instructions": [
+      "boil pasta",
+      "mix eggs",
+      "add bacon",
+      "combine"
+    ],
+    "cookingTime": 25,
+    "servings": 3,
+    "difficulty": "medium",
+    "rating": 4.8,
+    "createdAt": "2026-02-26T16:58:01.215Z"
+  },
+  {
+    "id": "b1f62146-e364-4c14-888e-bd5ca617c3b1",
+    "title": "Margherita Pizza",
+    "description": "Classic Italian pizza with tomato and mozzarella",
+    "ingredients": [
+      "dough",
+      "tomato sauce",
+      "mozzarella",
+      "basil"
+    ],
+    "instructions": [
+      "prepare dough",
+      "add sauce",
+      "add cheese",
+      "bake 220c for 15 min"
+    ],
+    "cookingTime": 30,
+    "servings": 4,
+    "difficulty": "medium",
+    "rating": 4.7,
+    "createdAt": "2026-02-26T17:04:11.466Z"
+  },
+  {
+    "id": "7ae30d17-1863-4b83-a306-102f5ce1e5cc",
+    "title": "Greek Salad",
+    "description": "Fresh and healthy Mediterranean salad",
+    "ingredients": [
+      "tomatoes",
+      "cucumber",
+      "feta cheese",
+      "olives",
+      "olive oil"
+    ],
+    "instructions": [
+      "chop vegetables",
+      "add feta",
+      "drizzle olive oil",
+      "mix"
+    ],
+    "cookingTime": 10,
+    "servings": 2,
+    "difficulty": "easy",
+    "rating": 4.3,
+    "createdAt": "2026-02-26T17:04:18.080Z"
+  }
+]
